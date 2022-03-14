@@ -5,9 +5,16 @@
 
 
 pool:
-  name: Default
+  name: mymac
+  demands:
+  - Agent.Name -equals zaniMacAgent
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
 
