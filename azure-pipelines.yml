@@ -18,3 +18,12 @@ steps:
       
       echo 'Hello world'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      cat <<EOF >/$HOME/aaaaa.config
+      first line
+      second line
+      third line
+      EOF
